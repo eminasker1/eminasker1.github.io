@@ -1,0 +1,240 @@
+h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Montserrat', sans-serif !important;
+        letter-spacing: -1px;
+    }
+
+    p {
+        font-family: sans-serif !important;
+        line-height: 26px;
+    }
+
+    .zoom {
+        transition: transform .5s;
+    }
+
+    .zoom:hover {
+        transform: scale(1.02);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .zoom2 {
+        transition: transform .1s;
+    }
+
+    .zoom2:hover {
+        transform: scale(1.05);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .highlight:hover {
+        background-color: <?= userInfo('dark_mode') ? 'rgb(25,33,43)' : 'rgb(250,250,250)' ?> !important;
+    }
+
+    /* New releases carousel */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-250px * 9));
+        }
+    }
+
+    .slider {
+        height: 320px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .slider::before,
+    .slider::after {
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+
+    .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slider .slide-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(250px * 18);
+    }
+
+    .slider .slide {
+        height: 100px;
+        width: 250px;
+    }
+
+    .hero-container {
+        margin-top:100px;
+        margin-left:150px;
+        margin-right:150px;
+    }
+
+    .hero-section {
+        margin-right: 150px;
+        margin-left: 150px;
+    }
+
+    .hero-image-section {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .hero-image {
+        width: 720px;
+        height: auto;
+    }
+
+    .hero-image-right {
+        margin-left: auto;
+    }
+
+    .hero-text-section {
+        max-width: 580px;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .hero-text-section-left {
+        margin-left: 0px;
+    }
+
+    .hero-text {
+        margin-top:40px;
+        font-size:20px;
+    }
+
+    .feature-icon {
+        font-size: 48px;
+    }
+
+    .feature-card {
+        height: 100px;
+    }
+
+    .hero-header {
+        margin-top:30px;
+        font-size:18px;
+        max-width:530px;
+        min-width:390px;
+    }
+
+    .hero-logo {
+        margin-top:50px;
+        margin-left:150px;
+        margin-right:150px;
+        width: 160px;
+    }
+
+    @media only screen and (max-width: 1800px) {
+        .hero-section {
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+    }
+
+    @media only screen and (max-width: 1400px) {
+        .hero-container {
+            margin-left:50px;
+            margin-right:50px;
+        }
+
+        .hero-section {
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        .signup-form {
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 50px;
+        }
+
+        .hero-image-margin {
+            margin-top: 80px;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .hero-image-section {
+            margin-bottom: 0px;
+            justify-content: center !important;
+            display: flex;
+        }
+
+        .hero-image-margin {
+            margin-top: 100px;
+        }
+
+        .hero-image {
+            width: 640px;
+        }
+
+        .hero-text-section {
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-text-section-left {
+            margin-left: auto;
+        }
+
+        .hero-text {
+            margin-top:20px;
+            font-size:20px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 28px;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .hero-image-margin {
+            display: none;
+        }
+
+        .hero-section-top {
+            margin-top: 420px;
+        }
+
+        .hero-header {
+            min-width: auto;
+        }
+
+        .hero-container {
+            margin-top: 50px;
+            margin-left:10px;
+            margin-right:10px;
+        }
+
+        .hero-logo {
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
